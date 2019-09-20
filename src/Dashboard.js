@@ -14,8 +14,8 @@ export default class Dashboard extends Component {
     render() {
         return (
             <div>
-                <Layout style={{ height: 900 }}>
-                    <Sider width={300}>
+                <Layout style={{ height: 920 }}>
+                    <Sider width={300} style={{backgroundColor:'white'}}>
                         <Content style={{ height: 200 }}>
                             <View1/>
                         </Content>
@@ -34,7 +34,7 @@ export default class Dashboard extends Component {
                             <Content>
                                 <View5/>
                             </Content>
-                            <Sider width={300}>
+                            <Sider width={300} style={{backgroundColor:'white'}}>
                                 <View6/>
                             </Sider>
                         </Layout>

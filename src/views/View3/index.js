@@ -4,7 +4,7 @@ import './view3.css';
 export default class View3 extends Component {
     render() {
         return (
-            <div id="view3">
+            <div id='view3' className='pane'>
                 view 3
             </div>
         )

@@ -1,4 +1,14 @@
-
+.pane {
+    background: #ffffff;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 1px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 2px #dddddd; */
+}
 
 
 
