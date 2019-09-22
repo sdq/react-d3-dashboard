@@ -12,12 +12,17 @@ const { Sider, Content } = Layout;
 
 export default class Dashboard extends Component {
     render() {
+        let user = {
+            name: 'Jack',
+            gender: 'Male',
+            age: 24,
+        }
         return (
             <div>
                 <Layout style={{ height: 920 }}>
                     <Sider width={300} style={{backgroundColor:'#eee'}}>
                         <Content style={{ height: 200 }}>
-                            <View1/>
+                            <View1 user={user}/>
                         </Content>
                         <Content style={{ height: 300 }}>
                             <View2/>

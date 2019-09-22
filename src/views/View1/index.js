@@ -4,18 +4,19 @@ import './view1.css';
 
 export default class View1 extends Component {
     render() {
+        let {user} = this.props;
         return (
             <div id='view1' className='pane'>
                 <div className='header'>view 1</div>
                 <div>
-                    <div style={{float: 'left', marginLeft: 5}}>
+                    <div className={'avatar-view'}>
                         <Avatar shape="square" size={120} icon="user" />
                     </div>
-                    <div style={{float: 'left', marginLeft: 30}}>
-                        <div>name: Jack</div>
-                        <div>gender: male</div>
-                        <div>age: 24</div>
-                        <div>job: Designer</div>
+                    <div className={'info-view'}>
+                        <div>name: {user.name}</div>
+                        <div>gender: {user.gender}</div>
+                        <div>age: {user.age}</div>
+                        <div>job: designer</div>
                     </div>
                 </div>
             </div>

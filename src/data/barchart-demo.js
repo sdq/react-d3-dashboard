@@ -1,58 +1,72 @@
 const data = [
     {
         'name':'Bob',
+        'gender':'Male',
         'age':33
     },
     {
         'name':'Robin',
+        'gender':'Male',
         'age':12
     },
     {
         'name':'Anne',
+        'gender':'Female',
         'age':41
     },
     {
         'name':'Mark',
+        'gender':'Male',
         'age':16
     },
     {
         'name':'Joe',
+        'gender':'Male',
         'age':59
     },
     {
         'name':'Eve',
+        'gender':'Female',
         'age':38
     },
     {
         'name':'Karen',
+        'gender':'Female',
         'age':21
     },
     {
         'name':'Kirsty',
+        'gender':'Unknown',
         'age':25
     },
     {
         'name':'Chris',
+        'gender':'Female',
         'age':30
     },
     {
         'name':'Lisa',
+        'gender':'Female',
         'age':47
     },
     {
         'name':'Tom',
-        'age':5
+        'gender':'Male',
+        'age':15
     },
     {
         'name':'Stacy',
+        'gender':'Unknown',
         'age':20
     },
     {
         'name':'Charles',
+        'gender':'Male',
         'age':13
     },
     {
         'name':'Mary',
+        'gender':'Female',
         'age':29
     },
 ]
