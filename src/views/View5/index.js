@@ -8,7 +8,9 @@ export default class View5 extends Component {
         return (
             <div id='view5' className='pane'>
                 <div className='header'>view 5</div>
-                <BarChart data={data} width={1000} height={560}/>
+                <div style={{ overflowX: 'scroll',overflowY:'hidden' }}>
+                <BarChart data={data} width={1000} height={550}/>
+                </div>                
             </div>
         )
     }
