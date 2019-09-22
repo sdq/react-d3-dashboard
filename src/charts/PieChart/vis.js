@@ -1,7 +1,21 @@
 import * as d3 from 'd3';
 
 const draw = (props) => {
-    console.log(props.data)
+    const data = props.data;
+    const gender = ['Male', 'Female', 'Unknown'];
+    let count = new Array(3).fill(0);
+    data.forEach(d => {
+        let genderIndex = gender.indexOf(d.gender);
+        if (genderIndex + 1)
+            count[genderIndex] += 1;
+    });
+
+    const dataset = [
+        { label: 'Male', count: count[0] },
+        { label: 'Female', count: count[1] },
+        { label: 'Unknown', count: count[2] }
+    ]
+
     d3.select('.vis-piechart > *').remove();
     const margin = { top: 10, right: 20, bottom: 30, left: 40 };
     const width = props.width - margin.left - margin.right;
@@ -14,17 +28,10 @@ const draw = (props) => {
         .append('g')
         .attr('transform', 'translate(' + (width / 2 + margin.left) + ',' + (height / 2 + margin.top) + ')');
 
-    let dataset = [
-        { label: 'Male', count: 48 },
-        { label: 'Famale', count: 25 },
-        { label: 'Unknown', count: 37 }
-    ];
-
     let radius = Math.min(width, height) / 2;
-    // let color = d3.scaleOrdinal(d3.schemeCategory20b);
-    var color = d3.scaleOrdinal()
-        .range(['steelblue', 'LightBlue', 'LightSteelBlue']);
 
+    let color = d3.scaleOrdinal()
+        .range(['steelblue', 'LightBlue', 'LightSteelBlue']);
 
     let arc = d3.arc()
         .innerRadius(0)
@@ -42,23 +49,22 @@ const draw = (props) => {
         .attr('fill', function (d, i) {
             return color(d.data.label);
         });
-
-    var legendG = svg.selectAll(".legend") // note appending it to mySvg and not svg to make positioning easier
+    let legendG = svg.selectAll(".legend")
         .data(pie(dataset))
         .enter().append("g")
         .attr("transform", function (d, i) {
-            return "translate(" + (i * 70 - 100) + "," + 110 + ")"; // place each legend on the right and bump each one down 15 pixels
+            return "translate(" + (i * 70 - 100) + "," + 110 + ")"; 
         })
         .attr("class", "legend");
 
-    legendG.append("rect") // make a matching color rect
+    legendG.append("rect")
         .attr("width", 10)
         .attr("height", 10)
         .attr("fill", function (d, i) {
             return color(i);
         });
 
-    legendG.append("text") // add the text
+    legendG.append("text") 
         .text(function (d) {
             return d.data.label;
         })
