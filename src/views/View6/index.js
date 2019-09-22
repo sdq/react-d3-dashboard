@@ -4,6 +4,12 @@ import data from '../../data/barchart-demo';
 import './view6.css';
 
 export default class View6 extends Component {
+
+    selectUser = (user) => {
+        console.log('select');
+        console.log(user);
+    }
+
     render() {
         return (
             <div id='view6' className='pane'>
@@ -12,9 +18,9 @@ export default class View6 extends Component {
                     size="small"
                     bordered
                     dataSource={data}
-                    renderItem={item => <List.Item>
+                    renderItem={user => <List.Item onClick = {() => this.selectUser(user.name)}>
                         <div>
-                            {item.name + ':' + item.age}
+                            {user.name + ':' + user.age}
                         </div>
                     </List.Item>}
                 />
