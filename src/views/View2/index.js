@@ -5,7 +5,7 @@ export default class View2 extends Component {
     render() {
         return (
             <div id='view2' className='pane'>
-                view 2
+                <div className='header'>view 2</div>
             </div>
         )
     }

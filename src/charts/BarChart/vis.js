@@ -1,9 +1,9 @@
 import * as d3 from 'd3';
-import data from '../../data/barchart-demo';
 import './style.css';
 
 const draw = (props) => {
     d3.select('.vis-barchart > *').remove();
+    const data = props.data;
     const margin = {top: 20, right: 20, bottom: 30, left: 40};
     const width = props.width - margin.left - margin.right;
     const height = props.height - margin.top - margin.bottom;
