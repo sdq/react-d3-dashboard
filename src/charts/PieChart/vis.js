@@ -1,6 +1,7 @@
 import * as d3 from 'd3';
 
 const draw = (props) => {
+    console.log(props.data)
     d3.select('.vis-piechart > *').remove();
     const margin = { top: 10, right: 20, bottom: 30, left: 40 };
     const width = props.width - margin.left - margin.right;

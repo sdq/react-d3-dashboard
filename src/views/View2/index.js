@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './view2.css';
 import PieChart from '../../charts/PieChart';
+import data from '../../data/barchart-demo';
 
 export default class View2 extends Component {
     render() {
@@ -9,7 +10,7 @@ export default class View2 extends Component {
         return (
             <div id='view2' className='pane'>
                 <div className='header'>view 2</div>
-                <PieChart width={width} height={height} />
+                <PieChart data={data} width={width} height={height} />
             </div>
         )
     }
