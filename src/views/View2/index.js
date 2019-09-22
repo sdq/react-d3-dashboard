@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './view2.css';
 import PieChart from '../../charts/PieChart';
-import data from '../../data/barchart-demo';
+import data from '../../data';
 
 export default class View2 extends Component {
     render() {

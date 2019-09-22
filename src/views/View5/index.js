@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BarChart from '../../charts/BarChart';
-import data from '../../data/barchart-demo';
+import data from '../../data';
 import './view5.css';
 
 export default class View5 extends Component {

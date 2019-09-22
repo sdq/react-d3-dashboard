@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { List } from 'antd';
-import data from '../../data/barchart-demo';
+import data from '../../data';
 import './view6.css';
 
 export default class View6 extends Component {
