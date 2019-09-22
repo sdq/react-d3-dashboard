@@ -44,7 +44,19 @@ export default class View3 extends Component {
         return (
             <div id='view3' className='pane'>
                 <div className='header'>view 3</div>
-                <div>
+                <h3>User</h3>
+                <Select
+                    style={{ width: 275, margin: 5 }}
+                    placeholder="Select User"
+                    onChange={this.onChangeSelection}
+                >
+                    <Option value="jack">Jack</Option>
+                    <Option value="lucy">Lucy</Option>
+                    <Option value="tom">Tom</Option>
+                </Select>
+                <Divider />
+                <h3>Gender</h3>
+                <div style={{ width: 275, margin: 5 }}>
                     <Checkbox
                         indeterminate={this.state.indeterminate}
                         onChange={this.onCheckAllChange}
@@ -54,23 +66,16 @@ export default class View3 extends Component {
                     </Checkbox>
                 </div>
                 <br />
-                <CheckboxGroup
-                    options={plainOptions}
-                    value={this.state.checkedList}
-                    onChange={this.onChangeCheckbox}
-                />
+                <div style={{ width: 275, margin: 5 }}>
+                    <CheckboxGroup
+                        options={plainOptions}
+                        value={this.state.checkedList}
+                        onChange={this.onChangeCheckbox}
+                    />
+                </div>
                 <Divider />
+                <h3>Age</h3>
                 <Slider defaultValue={30}/>
-                <Divider />
-                <Select
-                    style={{ width: 275, margin: 5 }}
-                    placeholder="Select a person"
-                    onChange={this.onChangeSelection}
-                >
-                    <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
-                    <Option value="tom">Tom</Option>
-                </Select>
             </div>
         )
     }
