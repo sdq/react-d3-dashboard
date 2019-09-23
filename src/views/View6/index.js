@@ -12,7 +12,7 @@ export default class View6 extends Component {
         const {data} = this.props;
         return (
             <div id='view6' className='pane'>
-                <div className='header'>view 6</div>
+                <div className='header'>User List</div>
                 <List
                     size="small"
                     bordered

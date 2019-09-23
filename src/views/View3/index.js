@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Select, Slider, Checkbox, Divider } from 'antd';
+import { Slider, Checkbox, Divider } from 'antd';
 import './view3.css';
-
-const { Option } = Select;
 
 const CheckboxGroup = Checkbox.Group;
 
@@ -46,7 +44,7 @@ export default class View3 extends Component {
     render() {
         return (
             <div id='view3' className='pane'>
-                <div className='header'>view 3</div>
+                <div className='header'>Filter</div>
                 <h3>Gender</h3>
                 <div style={{ width: 275, margin: 5 }}>
                     <Checkbox

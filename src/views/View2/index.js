@@ -9,7 +9,7 @@ export default class View2 extends Component {
         const height = 260;
         return (
             <div id='view2' className='pane'>
-                <div className='header'>view 2</div>
+                <div className='header'>Gender</div>
                 <PieChart data={data} width={width} height={height} />
             </div>
         )
