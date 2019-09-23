@@ -5,8 +5,9 @@ import './view6.css';
 export default class View6 extends Component {
 
     selectUser = (user) => {
-        console.log('select');
-        console.log(user);
+        // console.log('select');
+        // console.log(user);
+        this.props.changeSelectUser(user);
     }
 
     render() {
@@ -18,7 +19,7 @@ export default class View6 extends Component {
                     size="small"
                     bordered
                     dataSource={data}
-                    renderItem={user => <List.Item onClick = {() => this.selectUser(user.name)}>
+                    renderItem={user => <List.Item onClick = {() => this.selectUser(user)}>
                         <div>
                             {user.name + ':' + user.age}
                         </div>

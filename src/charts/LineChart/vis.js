@@ -1,7 +1,10 @@
 import * as d3 from 'd3';
 
 const draw = (props) => {
-    const data = props.data[0].activities;
+    let data = [];
+    if (props.data !== null) {
+        data = props.data.activities;
+    }
     d3.select('.vis-linechart > *').remove();
     let margin = { top: 20, right: 20, bottom: 30, left: 40 }
     const width = props.width - margin.left - margin.right;;

@@ -4,8 +4,14 @@ import './view1.css';
 
 export default class View1 extends Component {
     render() {
-        let {data} = this.props;
-        let user = data[0];
+        let {user} = this.props;
+        if (user === null) {
+            user = {
+                name: 'null',
+                gender: 'null',
+                age: 'null',
+            }
+        }
         return (
             <div id='view1' className='pane'>
                 <div className='header'>view 1</div>
