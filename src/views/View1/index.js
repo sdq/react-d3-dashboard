@@ -4,7 +4,8 @@ import './view1.css';
 
 export default class View1 extends Component {
     render() {
-        let {user} = this.props;
+        let {data} = this.props;
+        let user = data[0];
         return (
             <div id='view1' className='pane'>
                 <div className='header'>view 1</div>
@@ -16,7 +17,6 @@ export default class View1 extends Component {
                         <div>name: {user.name}</div>
                         <div>gender: {user.gender}</div>
                         <div>age: {user.age}</div>
-                        <div>job: designer</div>
                     </div>
                 </div>
             </div>

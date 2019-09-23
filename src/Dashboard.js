@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import data from './data';
 import { Layout } from 'antd';
 import View1 from './views/View1';
 import View2 from './views/View2';
@@ -12,20 +13,15 @@ const { Sider, Content } = Layout;
 
 export default class Dashboard extends Component {
     render() {
-        let user = {
-            name: 'Jack',
-            gender: 'Male',
-            age: 24,
-        }
         return (
             <div>
                 <Layout style={{ height: 920 }}>
                     <Sider width={300} style={{backgroundColor:'#eee'}}>
                         <Content style={{ height: 200 }}>
-                            <View1 user={user}/>
+                            <View1 data={data}/>
                         </Content>
                         <Content style={{ height: 300 }}>
-                            <View2/>
+                            <View2 data={data}/>
                         </Content>
                         <Content style={{ height: 400 }}>
                             <View3/>
@@ -33,14 +29,14 @@ export default class Dashboard extends Component {
                     </Sider>
                     <Layout>
                         <Content style={{ height: 300 }}>
-                            <View4/>
+                            <View4 data={data}/>
                         </Content>
                         <Layout style={{ height: 600 }}>
                             <Content>
-                                <View5/>
+                                <View5 data={data}/>
                             </Content>
                             <Sider width={300} style={{backgroundColor:'#eee'}}>
-                                <View6/>
+                                <View6 data={data}/>
                             </Sider>
                         </Layout>
                     </Layout>
