@@ -15,62 +15,73 @@ export default class Dashboard extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            selectedUser: data[0],
-            greaterThenAge: 0,
-            includedGender: ['Male', 'Female','Unknown'],
-        }
+        // this.state = {
+        //     selectedUser: data[0],
+        //     greaterThenAge: 0,
+        //     includedGender: ['Male', 'Female','Unknown'],
+        // }
     }
 
-    changeSelectUser = value => {
-        this.setState({
-            selectedUser: value
-        })
-    }
+    // changeSelectUser = value => {
+    //     this.setState({
+    //         selectedUser: value
+    //     })
+    // }
 
-    changeGreaterThenAge = value => {
-        this.setState({
-            greaterThenAge: value
-        })
-    }
+    // changeGreaterThenAge = value => {
+    //     this.setState({
+    //         greaterThenAge: value
+    //     })
+    // }
 
-    changeIncludedGender = value => {
-        this.setState({
-            includedGender: value
-        })
-    }
+    // changeIncludedGender = value => {
+    //     this.setState({
+    //         includedGender: value
+    //     })
+    // }
 
     render() {
-        const {selectedUser, greaterThenAge, includedGender} = this.state;
-        const filteredData = data.filter(user=>includedGender.indexOf(user.gender)!==-1)
-                                 .filter(user=>user.age>greaterThenAge);
+        // const {selectedUser, greaterThenAge, includedGender} = this.state;
+        // const filteredData = data.filter(user=>includedGender.indexOf(user.gender)!==-1)
+        //                          .filter(user=>user.age>greaterThenAge);
         return (
             <div>
                 <Layout style={{ height: 920 }}>
                     <Sider width={300} style={{backgroundColor:'#eee'}}>
                         <Content style={{ height: 200 }}>
-                            <View1 user={selectedUser}/>
+                            <View1 
+                                user={data[0]}
+                            />
                         </Content>
                         <Content style={{ height: 300 }}>
-                            <View2 data={filteredData}/>
+                            <View2 
+                                data={data}
+                            />
                         </Content>
                         <Content style={{ height: 400 }}>
                             <View3 
-                                changeGreaterThenAge={this.changeGreaterThenAge}
-                                changeIncludedGender={this.changeIncludedGender}
+                                // changeGreaterThenAge={this.changeGreaterThenAge}
+                                // changeIncludedGender={this.changeIncludedGender}
                             />
                         </Content>
                     </Sider>
                     <Layout>
                         <Content style={{ height: 300 }}>
-                            <View4 user={selectedUser}/>
+                            <View4 
+                                user={data[0]}
+                            />
                         </Content>
                         <Layout style={{ height: 600 }}>
                             <Content>
-                                <View5 data={filteredData}/>
+                                <View5 
+                                    data={data}
+                                />
                             </Content>
                             <Sider width={300} style={{backgroundColor:'#eee'}}>
-                                <View6 data={filteredData} changeSelectUser={this.changeSelectUser}/>
+                                <View6 
+                                    data={data} 
+                                    // changeSelectUser={this.changeSelectUser}
+                                />
                             </Sider>
                         </Layout>
                     </Layout>

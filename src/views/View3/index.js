@@ -13,41 +13,41 @@ export default class View3 extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            checkedList: defaultCheckedList,
-            indeterminate: true,
-            checkAll: false,
-        };
+        // this.state = {
+        //     checkedList: defaultCheckedList,
+        //     indeterminate: true,
+        //     checkAll: false,
+        // };
     }
 
-    onChangeCheckbox = checkedList => {
-        this.setState({
-            checkedList,
-            indeterminate: !!checkedList.length && checkedList.length < plainOptions.length,
-            checkAll: checkedList.length === plainOptions.length,
-        });
-        this.props.changeIncludedGender(checkedList);
-    };
+    // onChangeCheckbox = checkedList => {
+    //     this.setState({
+    //         checkedList,
+    //         indeterminate: !!checkedList.length && checkedList.length < plainOptions.length,
+    //         checkAll: checkedList.length === plainOptions.length,
+    //     });
+    //     this.props.changeIncludedGender(checkedList);
+    // };
 
-    onCheckAllChange = e => {
-        const checkedList = e.target.checked ? plainOptions : [];
-        this.setState({
-            checkedList: checkedList,
-            indeterminate: false,
-            checkAll: e.target.checked,
-        });
-        this.props.changeIncludedGender(checkedList);
-    };
+    // onCheckAllChange = e => {
+    //     const checkedList = e.target.checked ? plainOptions : [];
+    //     this.setState({
+    //         checkedList: checkedList,
+    //         indeterminate: false,
+    //         checkAll: e.target.checked,
+    //     });
+    //     this.props.changeIncludedGender(checkedList);
+    // };
 
-    onChangeSilder = value => {
-        this.props.changeGreaterThenAge(value);
-    }
+    // onChangeSilder = value => {
+    //     this.props.changeGreaterThenAge(value);
+    // }
 
     render() {
         return (
             <div id='view3' className='pane'>
                 <div className='header'>view 3</div>
-                <h3>Gender</h3>
+                {/* <h3>Gender</h3>
                 <div style={{ width: 275, margin: 5 }}>
                     <Checkbox
                         indeterminate={this.state.indeterminate}
@@ -67,7 +67,7 @@ export default class View3 extends Component {
                 </div>
                 <Divider />
                 <h3>Age</h3>
-                <Slider defaultValue={0} onChange={this.onChangeSilder}/>
+                <Slider defaultValue={0} onChange={this.onChangeSilder}/> */}
             </div>
         )
     }

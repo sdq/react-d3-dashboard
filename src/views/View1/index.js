@@ -15,7 +15,7 @@ export default class View1 extends Component {
         return (
             <div id='view1' className='pane'>
                 <div className='header'>view 1</div>
-                <div>
+                {/* <div>
                     <div className={'avatar-view'}>
                         <Avatar shape="square" size={120} icon="user" />
                     </div>
@@ -24,7 +24,7 @@ export default class View1 extends Component {
                         <div>gender: {user.gender}</div>
                         <div>age: {user.age}</div>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
