@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './view4.css';
 import LineChart from '../../charts/LineChart';
+import data from '../../data';
 
 export default class View4 extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class View4 extends Component {
             <div id='view4' className='pane' >
                 <div className='header'>view 4</div>
                 <div style={{ overflowX: 'scroll',overflowY:'hidden' }}>
-                    <LineChart width={width} height={height} />
+                    <LineChart data={data} width={width} height={height} />
                 </div>
             </div>
         )
