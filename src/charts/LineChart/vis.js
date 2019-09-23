@@ -1,9 +1,10 @@
 import * as d3 from 'd3';
+import _ from 'lodash';
 
 const draw = (props) => {
     let data = [];
     if (props.data !== null) {
-        data = props.data.activities;
+        data = _.cloneDeep(props.data.activities);
     }
     d3.select('.vis-linechart > *').remove();
     let margin = { top: 20, right: 20, bottom: 30, left: 40 }

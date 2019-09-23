@@ -5,8 +5,6 @@ import './view6.css';
 export default class View6 extends Component {
 
     selectUser = (user) => {
-        // console.log('select');
-        // console.log(user);
         this.props.changeSelectUser(user);
     }
 
