@@ -9,7 +9,7 @@ import View5 from './views/View5';
 import View6 from './views/View6';
 import './dashboard.css';
 
-const { Sider, Content } = Layout;
+const { Sider, Content, Footer } = Layout;
 
 export default class Dashboard extends Component {
 
@@ -74,6 +74,14 @@ export default class Dashboard extends Component {
                             </Sider>
                         </Layout>
                     </Layout>
+                </Layout>
+                <Layout>
+                    <Footer style={{ height: 20 }}>
+                        <div style={{marginTop: -10}}>
+                            Source Code <a href='https://github.com/sdq/react-d3-dashboard'>https://github.com/sdq/react-d3-dashboard</a>;
+                            Author <a href='https://sdq.ai'>sdq</a>;
+                        </div>
+                    </Footer>
                 </Layout>
             </div>
         )
